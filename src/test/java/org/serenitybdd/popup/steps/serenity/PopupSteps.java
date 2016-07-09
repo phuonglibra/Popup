@@ -36,17 +36,20 @@ public class PopupSteps extends ScenarioSteps {
 		Assert.assertEquals(popuppage.getExpectText(elementTextResult),
 				textResult);
 	}
-@Step
+
+	@Step
 	public void cancelDialog(String elementDialog) {
-	popuppage.showDialogConfirm(elementDialog);
+		popuppage.showDialogConfirm(elementDialog);
 	}
-@Step
-public void okDialog(String elementDialog) {
-	popuppage.showDialogConfirmOk(elementDialog);
-}
-@Step
-public void assertTextOnDialog(String elementDialog, String textOnDialog) {
-	Assert.assertEquals(popuppage.getExpectTextOnDialog(elementDialog),
-			textOnDialog);
-}
+
+	@Step
+	public void okDialog(String elementDialog) {
+		popuppage.showDialogConfirmOk(elementDialog);
+	}
+
+	@Step
+	public void assertTextOnDialog(String elementDialog, String textOnDialog) {
+		Assert.assertEquals(popuppage.getExpectTextOnDialog(elementDialog),
+				textOnDialog);
+	}
 }

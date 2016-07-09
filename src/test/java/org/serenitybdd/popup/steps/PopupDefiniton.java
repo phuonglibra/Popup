@@ -40,13 +40,14 @@ public class PopupDefiniton {
 	}
 
 	@Given("^choose OK on confirm dialog box \"([^\"]*)\"$")
-	public void choose_OK_on_confirm_dialog_box(String elementDialog) throws Throwable {
+	public void choose_OK_on_confirm_dialog_box(String elementDialog)
+			throws Throwable {
 		popup.okDialog(elementDialog);
 	}
 
 	@Then("^assert that text on \"([^\"]*)\" popup box is \"([^\"]*)\"$")
-	public void assert_that_text_on_popup_box_is(String elementDialog, String textOnDialog)
-			throws Throwable {
+	public void assert_that_text_on_popup_box_is(String elementDialog,
+			String textOnDialog) throws Throwable {
 		popup.assertTextOnDialog(elementDialog, textOnDialog);
 	}
 }

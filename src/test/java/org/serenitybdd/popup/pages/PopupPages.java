@@ -69,9 +69,9 @@ public class PopupPages extends PageObject {
 	}
 
 	public String getExpectTextOnDialog(String elementDialog) {
-		
-		 getWebElement(elementDialog).click();
-		 return getAlert().getText();
+
+		getWebElement(elementDialog).click();
+		return getAlert().getText();
 	}
 
 }
